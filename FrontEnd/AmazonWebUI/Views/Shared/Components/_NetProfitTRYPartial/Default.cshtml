@@ -1,0 +1,24 @@
+﻿@model List<OrderResultDto>
+
+
+@{var Total=0;
+
+@foreach (var item in Model)
+{
+   
+    Total = Total + item.SellTry;
+}
+<div class="col-lg-3 col-sm-6">
+    <div class="card gradient-2">
+        <div class="card-body">
+            <h3 class="card-title text-white">Toplam Gelir - TRY</h3>
+            <div class="d-inline-block">
+
+
+                    <h2 class="text-white">@Total ₺</h2>
+            </div>
+            <span class="float-right display-5 opacity-5"><i class="fa fa-money"></i></span>
+        </div>
+    </div>
+</div>
+}

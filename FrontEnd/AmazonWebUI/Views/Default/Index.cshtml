@@ -1,0 +1,52 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @await Component.InvokeAsync("_HeadPartial")
+</head>
+<body>
+
+    @await Component.InvokeAsync("_PreloaderPartial")
+    <div id="main-wrapper">
+
+        @await Component.InvokeAsync("_NavHeaderPartial")
+
+     
+        @await Component.InvokeAsync("_HeaderPartial")
+
+        @await Component.InvokeAsync("_SidebarPartial")
+        <div class="content-body">
+
+            <div class="container-fluid mt-3">
+                <div class="row">
+                    @await Component.InvokeAsync("_ProductSoldPartial")
+                    @await Component.InvokeAsync("_NetProfitTRYPartial")
+                    @await Component.InvokeAsync("_NetProfitUSDPartial")
+                    @await Component.InvokeAsync("_ExchangePartial")
+                </div>
+            </div>
+            @await Component.InvokeAsync("_SalesGraphPartial")
+            <div class="row">
+                @await Component.InvokeAsync("_OrderSummaryPartial")
+                @await Component.InvokeAsync("_OrderOverviewPartial")
+                @await Component.InvokeAsync("_TodoPartial")  
+                @await Component.InvokeAsync("_BorcTablePartial")
+                @await Component.InvokeAsync("_StoreLocation")
+            </div>
+
+
+        </div>
+       @await Component.InvokeAsync("_FooterPartial")
+   
+    </div>
+      @await Component.InvokeAsync("_ScriptsPartial")
+
+
+
+</body>
+
+</html>

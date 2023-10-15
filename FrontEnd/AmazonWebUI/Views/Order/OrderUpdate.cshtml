@@ -1,0 +1,32 @@
+﻿@model OrderUpdateDto
+@{
+    ViewData["Title"] = "UpdateStuff";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <input type="hidden" asp-for="OrderID" />
+    <label>Sipariş ID</label>
+    <input type="text" asp-for="SiparisNumarasi" class="form-control" />
+    <br />
+    
+    <label>TRY - Alış</label>
+    <input type="text" asp-for="BuyTry" class="form-control" />
+    <br />
+    <label>Usd - Alış</label>
+    <input type="text" asp-for="BuyUsd" class="form-control" />
+    <br />
+    <label>TRY - Satış</label>
+    <input type="text" asp-for="SellTry" class="form-control" />
+    <br />
+    <label>USD - Satış</label>
+    <input type="text" asp-for="SellUsd" class="form-control" />
+    <br />
+    <label>Ülke Para Birimi Satış</label>
+    <input type="text" asp-for="SellForCountry" class="form-control" />
+    <br />
+    <label>Ülke</label>
+    <input type="text" asp-for="Country" class="form-control" />
+    <br />
+    <button class="btn btn-outline-success">Güncelle</button>
+</form>

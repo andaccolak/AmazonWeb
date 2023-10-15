@@ -1,0 +1,38 @@
+﻿@model List<OrderResultDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Sipariş Id</th>
+        <th>TRY - Alış</th>
+        <th>USD - Alış</th>
+        <th>Ülke Para birimi Satış</th>
+        <th>TRY - satış</th>
+        <th>USD - Satış</th>
+        <th>Ülke</th>
+        <th>Kar - USD</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+
+        <tr>
+            <th>@item.SiparisNumarasi</th>
+            <td>@item.BuyTry</td>
+            <td>@item.BuyUsd</td>
+            <td>@item.SellForCountry</td>
+            <td>@item.SellTry</td>
+            <td>@item.SellUsd</td>
+            <td>@item.Country</td>
+            <td><a href="/Order/OrderUpdate/@item.OrderID" class="btn mb-1 btn-rounded btn-outline-success">Güncelle</a></td>
+
+            <td><a href="#" class="btn mb-1 btn-rounded btn-outline-dark">Detaylar</a></td>
+        </tr>
+
+    }
+</table>
+

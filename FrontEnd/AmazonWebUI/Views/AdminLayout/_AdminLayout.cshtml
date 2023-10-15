@@ -1,0 +1,78 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Hotel Projesi</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="~/adminweb/images/favicon.png">
+    <!-- Custom Stylesheet -->
+    <link href="~/adminweb/css/style.css" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+   
+    @await Html.PartialAsync("/Views/AdminLayout/PreLoader.cshtml")
+
+   
+    
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        
+       
+        @await Html.PartialAsync("/Views/AdminLayout/NavHeader.cshtml")
+
+        
+       @await Html.PartialAsync("/Views/AdminLayout/HeadPartial.cshtml")
+        
+        @await Html.PartialAsync("/Views/AdminLayout/SideBar.cshtml")
+        <div class="content-body">
+
+            <div class="container-fluid mt-3">
+                <div class="row">
+                    @RenderBody()
+                    @await Component.InvokeAsync("_ProductSoldPartial")
+                    @await Component.InvokeAsync("_NetProfitTRYPartial")
+                    @await Component.InvokeAsync("_NetProfitUSDPartial")
+                    @await Component.InvokeAsync("_ExchangePartial")
+                </div>
+            </div>
+            @await Component.InvokeAsync("_SalesGraphPartial")
+            <div class="row">
+                @await Component.InvokeAsync("_OrderSummaryPartial")
+                @await Component.InvokeAsync("_OrderOverviewPartial")
+                @await Component.InvokeAsync("_TodoPartial")
+                @await Component.InvokeAsync("_BorcTablePartial")
+                @await Component.InvokeAsync("_StoreLocation")
+            </div>
+
+
+        </div>
+                               
+            <!-- #/ container -->
+@*        @await Html.PartialAsync("/Views/AdminLayout/ContentBody.cshtml")
+*@        
+       
+        @await Html.PartialAsync("/Views/AdminLayout/Footer.cshtml")
+
+       
+    </div>
+   
+    @await Html.PartialAsync("/Views/AdminLayout/Scripts.cshtml")
+
+</body>
+
+</html>

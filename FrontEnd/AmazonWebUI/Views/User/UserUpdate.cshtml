@@ -1,0 +1,16 @@
+﻿@model UserUpdateDto
+@{
+    ViewData["Title"] = "UpdateStuff";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <input type="hidden" asp-for="UserID" />
+    <label>Email</label>
+    <input type="text" asp-for="Email" class="form-control" />
+    <br />
+    <label>Borç Durumu</label>
+    <input type="text" asp-for="BorcStatus" class="form-control" />
+    <br />
+    <button class="btn btn-outline-success">Güncelle</button>
+</form>

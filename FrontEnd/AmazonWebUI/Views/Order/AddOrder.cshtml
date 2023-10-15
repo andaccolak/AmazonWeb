@@ -1,0 +1,31 @@
+﻿@model OrderCreateDto
+@{
+    ViewData["Title"] = "AddOrder";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <label>Sipariş ID</label>
+    <input type="text" asp-for="SiparisNumarasi" class="form-control" />
+    <br />
+    <label>TRY - Alış</label>
+    <input type="text" asp-for="BuyTry" class="form-control" />
+    <br />
+    <label>TRY - Satış</label>
+    <input type="text" asp-for="SellTry" class="form-control" />
+    <br />
+    <label>USD - Alış</label>
+    <input type="text" asp-for="BuyUsd" class="form-control" />
+    <br />
+    <label>USD - Satış</label>
+    <input type="text" asp-for="SellUsd" class="form-control" />
+    <br />
+    <label>Ülke Para Birimi - Satış</label>
+    <input type="text" asp-for="SellForCountry" class="form-control" />
+    <br />
+    <label>Ülke</label>
+    <input type="text" asp-for="Country" class="form-control" />
+    <br />
+    <button class="btn btn-outline-success">Ekle</button>
+
+</form>

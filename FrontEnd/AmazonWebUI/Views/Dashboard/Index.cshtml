@@ -1,0 +1,37 @@
+﻿@model Tuple<ResultCreditCardDto,ResultTodoDto>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Kart Sahibi</th>
+        <th>Kart Numarası</th>
+        <th>Borç durumu</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Detaylar</th>
+    </tr>
+
+    <th>@Model.Item1.CreditCardOwner</th>
+
+   @* @foreach (var item in )
+    {
+
+        <tr>
+            <th>@item.CreditCardOwner</th>
+            <td>@item.CreditCardNumber</td>
+            <td>@item.BorcStatus</td>
+            <td><a href="/CreditCard/DeleteCreditCard/@item.CreditCardID" class="btn mb-1 btn-rounded btn-outline-danger">Sil</a></td>
+            <td><a href="/CreditCard/UpdateCreditCard/@item.CreditCardID" class="btn mb-1 btn-rounded btn-outline-success">Güncelle</a></td>
+
+            <td><a href="#" class="btn mb-1 btn-rounded btn-outline-dark">Detaylar</a></td>
+        </tr>
+
+    }*@
+
+</table>
+
