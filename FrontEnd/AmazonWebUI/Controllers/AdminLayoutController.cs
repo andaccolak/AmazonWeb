@@ -4,6 +4,8 @@ namespace AmazonWebUI.Controllers
 {
     public class AdminLayoutController : Controller
     {
+
+        //deneme commit
         public IActionResult _AdminLayout()
         {
             return View();
